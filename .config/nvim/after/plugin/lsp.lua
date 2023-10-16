@@ -9,8 +9,9 @@ lsp.nvim_workspace()
 lsp.ensure_installed({
 	'tsserver',
 	'eslint',
-	'sumneko_lua',
-	'gopls'
+	'lua_ls',
+	'gopls',
+  'rust_analyzer'
 })
 
 -- Fix Undefined global 'vim'
