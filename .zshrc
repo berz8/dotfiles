@@ -76,7 +76,8 @@ plugins=(
   npm
   zsh-syntax-highlighting
   fast-syntax-highlighting
-  zsh-autocomplete
+#  zsh-autocomplete
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -117,6 +118,14 @@ export PATH="$PNPM_HOME:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Go
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
+
+# fly.io CLI
+export FLYCTL_INSTALL="/home/berz/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 
 # Load Angular CLI autocompletion.
