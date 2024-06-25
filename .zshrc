@@ -70,14 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  dotenv
-  npm
-  zsh-syntax-highlighting
-  fast-syntax-highlighting
-  zsh-autocomplete
-)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,29 +99,32 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export PATH="/usr/local/opt/node@18/bin:$PATH"
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # pnpm
-export PNPM_HOME="/home/berz/.local/share/pnpm"
+export PNPM_HOME="/Users/berz/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # bun completions
-[ -s "/home/berz/.bun/_bun" ] && source "/home/berz/.bun/_bun"
+[ -s "/Users/berz/.bun/_bun" ] && source "/Users/berz/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+export PATH=$PATH:$(go env GOPATH)/bin
+
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 
+alias fd="bash /Users/berz/scripts/fzf-tmux-session.sh"
 
-
-# Set up Node Version Manager
-source /usr/share/nvm/init-nvm.sh
-
-# Turso
-export PATH="/home/berz/.turso:$PATH"
-
-
-alias fd="bash /home/berz/scripts/fzf-tmux-session.sh"
+# Aliases
+alias vim="nvim"
+alias v="nvim"
+alias gs="git status"
+alias gd="git diff"
