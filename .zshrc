@@ -62,6 +62,7 @@ alias vim="nvim"
 alias v="nvim"
 alias gs="git status"
 alias gd="git diff"
+alias ll="ls -alsh"
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
