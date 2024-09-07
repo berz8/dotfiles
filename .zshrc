@@ -15,6 +15,7 @@ alias gap='git add -p'
 alias vim="nvim"
 alias v="nvim"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias kb="xmodmap ~/.Xmodmap"
 
 # pnpm
 export PNPM_HOME="/home/berz/.local/share/pnpm"

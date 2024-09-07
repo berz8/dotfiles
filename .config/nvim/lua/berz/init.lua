@@ -1,3 +1,4 @@
-require("berz.remap")
-require("berz.set")
-vim.cmd.colorscheme "catppuccin"
+require("berz.options")
+require("berz.lazy")
+require("berz.keymap_utils")
+require("berz.keymaps")
